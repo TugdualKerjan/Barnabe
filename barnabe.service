@@ -1,0 +1,14 @@
+[Unit]
+Description=Run Barnabe
+After=multi-user.target
+
+[Service]
+WorkingDirectory=/home/pi
+User=pi
+Type=simple
+ExecStart=python3 /usr/lib/main.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
